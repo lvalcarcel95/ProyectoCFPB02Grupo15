@@ -1,6 +1,6 @@
 --Integrantes
 
 --Gloria Maria Velasquez Molina
-
+--Lina Marcela Valcarcel Rojas
 --Repositorio:
 https://github.com/lvalcarcel95/ProyectoCFPB02Grupo15.git
