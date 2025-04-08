@@ -160,6 +160,14 @@ public class GenerateInfoFiles {
             oos.writeObject(lines);
         }
     }
+	
+	/**carga los vendedores desde el archivo "vendedores.csv" y los almacena en un mapa.
+	*El archivo debe estar ubicado en {@code Constants.DATA_FOLDER} y contener datos delimitados por puntoy coma.
+	*Se omite la primera linea (encabezado).
+	*
+	*@throws IOException si ocurre un error al leer el archivo.
+	*/
+
 
     public static void cargarVendedores() throws IOException {
         Path path = Constants.DATA_FOLDER.resolve("vendedores.csv");
@@ -174,6 +182,12 @@ public class GenerateInfoFiles {
             }
         }
     }
+    /**
+    *Carga los productos válidos desde el archivo " productos.cvs" y los guarda en una lista.
+    *omite la primera linea (encabezado) y agrega el primer campo de cada linea a {@code productos validos}.
+    *
+    *@throws IOexception si ocurre un error al leer el archivo.
+    */
 
     public static void cargarProductos() throws IOException {
         Path path = Constants.DATA_FOLDER.resolve("productos.csv");
@@ -186,6 +200,11 @@ public class GenerateInfoFiles {
             }
         }
     }
+	/** Procesa los archivos de ventas ubicados en el directorio definido por {@code Constants.DATA_FOLDER}.
+	*Este metodp debe encargarse de recorrer los archivos del directorio y Extraer la informacion necesaria.
+	*
+	*@throws IOException si curre un error al acceder o leer los archivos.
+	*/
 
     public static void procesarArchivosVentas() throws IOException {
         File folder = Constants.DATA_FOLDER.toFile();
