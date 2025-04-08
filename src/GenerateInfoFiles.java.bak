@@ -197,7 +197,7 @@ public class GenerateInfoFiles {
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 reader.readLine(); // Saltar encabezado: ProductoId;Cantidad
 
-                // Extrae ID del vendedor del nombre del archivo, ej: ventas_123456.csv
+                // Extrae ID del nombre del archivo, ej: ventas_123456.csv
                 String fileName = file.getName();
                 String idStr = fileName.substring("ventas_".length(), fileName.indexOf(".csv"));
 
