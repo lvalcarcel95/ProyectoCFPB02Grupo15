@@ -1,55 +1,6 @@
-ID;Nombre
-302248;María Pérez
-400657;Juan Martínez
-868328;Ana Gómez
-978851;Luis Rodríguez
-986428;Carmen Sánchez
-333268;Pedro García
-501197;Laura Díaz
-851717;Jorge Hernández
-599574;Sofía López
-284637;Miguel Torres
-202685;María Pérez
-529627;Juan Martínez
-284889;Ana Gómez
-900178;Luis Rodríguez
-491996;Carmen Sánchez
-438035;Pedro García
-203279;Laura Díaz
-889549;Jorge Hernández
-506467;Sofía López
-879241;Miguel Torres
-405170;María Pérez
-964795;Juan Martínez
-715424;Ana Gómez
-165820;Luis Rodríguez
-639831;Carmen Sánchez
-908768;Pedro García
-577098;Laura Díaz
-331165;Jorge Hernández
-703735;Sofía López
-442807;Miguel Torres
-490974;María Pérez
-495459;Juan Martínez
-753211;Ana Gómez
-383191;Luis Rodríguez
-257819;Carmen Sánchez
-165628;Pedro García
-679652;Laura Díaz
-329106;Jorge Hernández
-696856;Sofía López
-838974;Miguel Torres
-130517;María Pérez
-286999;Juan Martínez
-195805;Ana Gómez
-733468;Luis Rodríguez
-372189;Carmen Sánchez
-319863;Pedro García
-457700;Laura Díaz
-763732;Jorge Hernández
-819397;Sofía López
-384388;Miguel Torres
-996013;María Pérez
-243173;Juan Martínez
-330546;Ana Gómez
-817685;Luis Rodríguez
+TipoDocumento;NumeroDocumento;Nombres;Apellidos
+CC;541523;Maria;Perez
+CC;440054;Juan;Martinez
+CC;858228;Ana;Gomez
+CC;428395;Luis;Rodriguez
+CC;957839;Carmen;Sanchez
