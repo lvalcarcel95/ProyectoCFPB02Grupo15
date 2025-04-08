@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.util.Map;
-import java.util.Scanner;
-
 
 /**
  * Clase principal encargada de ejecutar la lógica del programa:
@@ -30,56 +28,31 @@ public class Main {
      * Este método llama a los métodos definidos en la clase GenerateInfoFiles.
      **/
     private static void ejecutarMenuGeneracionArchivosPrueba() {
-
-        Scanner scanner = new Scanner(System.in);
-
         try {
-            System.out.println("****************************************************");
-            System.out.println("************ Menu creación de archivos *************");
-            System.out.println("****************************************************");
-            System.out.println("**** 1 - Crear archivo de productos              ****");
-            System.out.println("**** 2 - Crear archivo de información vendedores ****");
-            System.out.println("**** 3 - Crear archivos de ventas                ****");
-            System.out.println("**** 4 - Procesar y visualizar archivos          ****");
-            System.out.println("****************************************************");
-            System.out.print("Seleccione una opción: ");
+            GenerateInfoFiles.createProductsFile(5);
+            GenerateInfoFiles.createSalesManInfoFile(5);
+            GenerateInfoFiles.cargarVendedores();
+            GenerateInfoFiles.cargarProductos();
 
-            int opcion = scanner.nextInt();
+            // Genera archivos de ventas para todos los vendedores registrados
+            for (Map.Entry<Long, String> vendedor : GenerateInfoFiles.getVendedoresMap().entrySet()) {
+                long id = vendedor.getKey();
 
-            switch (opcion) {
-                case 1:
-                    GenerateInfoFiles.createProductsFile(5);
-                    break;
-                case 2:
-                    GenerateInfoFiles.createSalesManInfoFile(5);
-                    break;
-                case 3:
-                    GenerateInfoFiles.cargarVendedores();
-                    GenerateInfoFiles.cargarProductos();
-                    for (Map.Entry<Long, String> vendedor : GenerateInfoFiles.getVendedoresMap().entrySet()) {
-                        long id = vendedor.getKey();
-                        GenerateInfoFiles.createSalesMenFile(3, id);
-                        GenerateInfoFiles.createSerializedSalesFile(3, id);
-                    }
-                    break;
-                case 4:
-                    GenerateInfoFiles.cargarVendedores();
-                    GenerateInfoFiles.cargarProductos();
-                    GenerateInfoFiles.procesarArchivosVentas();
-                    GenerateInfoFiles.procesarArchivosVentasSerializados();
-                    GenerateInfoFiles.visualizarArchivosSerializados();
-                    break;
-                default:
-                    System.out.println("Opción no válida.");
+                GenerateInfoFiles.createSalesMenFile(3, id);
+                GenerateInfoFiles.createSerializedSalesFile(3, id);
             }
+
+            // Valida archivos generados y visualizar los archivos generados en consola
+            GenerateInfoFiles.procesarArchivosVentas();
+            GenerateInfoFiles.procesarArchivosVentasSerializados();
+            GenerateInfoFiles.visualizarArchivosSerializados();
+
+            System.out.println("Archivos de prueba generados y validados correctamente");
 
         } catch (IOException | ClassNotFoundException e) {
             System.err.println("Error generando o procesando archivos de prueba, detalle: " + e.getMessage());
             e.printStackTrace();
-        } finally {
-            scanner.close();
         }
-
     }
 }
 
