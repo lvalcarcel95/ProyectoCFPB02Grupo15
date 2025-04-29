@@ -81,6 +81,12 @@ public class Main {
                                 String[] parts = line.split(";");
                                 if (parts.length == 2) {
                                     int cantidad = Integer.parseInt(parts[1]);
+
+                                    if (cantidad < 0) {
+                                        System.err.println("Error: cantidad negativa detectada en archivo " + path.getFileName());
+                                        continue;
+                                    }
+
                                     total += cantidad;
                                 }
                             }
@@ -116,7 +122,7 @@ public class Main {
                                 String[] parts = venta.split(";");
                                 if (parts.length == 2) {
                                     String productoId = parts[0];
-                                    int cantidad = Integer.parseInt(parts[1]);
+                                    int cantidad = Integer.parseInt(parts[1]);   
                                     unidadesPorProducto.merge(productoId, cantidad, Integer::sum);
                                 }
                             }
