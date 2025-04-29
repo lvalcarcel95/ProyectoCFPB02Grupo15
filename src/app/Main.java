@@ -24,8 +24,8 @@ public class Main {
         try {
 
             ejecutarMenuGeneracionArchivosPrueba();
-            procesarArchivosVentas();  // Punto 3
-            procesarArchivosVentasSerializados();  // Punto 4
+            procesarArchivosVentas();
+            procesarArchivosVentasSerializados();
 
 
             System.out.println("Procesamiento finalizado exitosamente");
