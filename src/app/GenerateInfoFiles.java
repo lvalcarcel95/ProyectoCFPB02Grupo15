@@ -32,12 +32,16 @@ public class GenerateInfoFiles {
 
     public static void main(String[] args) {
         try {
+
+            //Creacion de Archivo
             createProductsFile(10);
             createSalesManInfoFile(10);
 
             cargarVendedores();
             cargarProductos();
 
+
+            // Exportar ventas aleatorias para cada vendedor en CSV y .ser
             for (long id : vendedoresMap.keySet()) {
                 // Exportar en CSV
                 exportarVentas(new CsvSalesExporter(), 5 + random.nextInt(5), id);
@@ -54,6 +58,13 @@ public class GenerateInfoFiles {
 
     public static void createSalesManInfoFile(int quantitySellers) throws IOException {
         Path filePath = Constants.DATA_FOLDER.resolve("vendedores.csv");
+
+        // Se valida si el archivo ya existe para no crearlo nuevamente
+        if (Files.exists(filePath)) {
+            System.out.println("El archivo de vendedores ya existe. No se creará uno nuevo.");
+            return;
+        }
+
         try (BufferedWriter writer = Files.newBufferedWriter(filePath)) {
             writer.write("TipoDocumento;NumeroDocumento;Nombres;Apellidos\n");
             Set<Long> ids = new HashSet<>();
@@ -69,8 +80,16 @@ public class GenerateInfoFiles {
         }
     }
 
+
     public static void createProductsFile(int quantityProducts) throws IOException {
         Path filePath = Constants.DATA_FOLDER.resolve("productos.csv");
+
+        // Se valida si el archivo ya existe para no crearlo nuevamente
+        if (Files.exists(filePath)) {
+            System.out.println("El archivo de productos ya existe. No se creará uno nuevo.");
+            return;
+        }
+
         try (BufferedWriter writer = Files.newBufferedWriter(filePath)) {
             writer.write("ProductoId;Nombre;Precio\n");
             Set<String> ids = new HashSet<>();
