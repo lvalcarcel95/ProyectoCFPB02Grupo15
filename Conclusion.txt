@@ -1,0 +1,18 @@
+Lo aprendido durante el desarrollo del proyecto: 
+
+En el desarrollo del proyecto aprendimos a trabajar y conocer archivos en Java, como archivos de texto (CSV) y archivos serializados. 
+Practicamos el uso de excepciones para manejar errores y reforzamos la idea de organizar mejor el código, usando clases y métodos estáticos.
+Se uso el patrón Strategy para desacoplar responsabilidades y refactorizar el código, esto nos sirvió para aprender un poco sobre el manejo de patrones en el desarrollo de Software.
+En Github pudimos practicar el manejo de la creación de ramas y el uso de Pull request para organizar el versiona miento de código.
+
+Posibles aplicaciones en mi vida profesional:
+
+En nuestra vida como desarrolladoras seguramente tendremos que hacer el uso de versionamiento de software sea en git, Azure git u otro.
+La creación y lectura de archivos planos sigue y seguirá estando muy presente en el desarrollo de aplicaciones por lo que seguramente lo que aprendimos en la administración de estos archivos lo aplicaremos en la vida real.
+Actualmente las empresas de desarrollo tienden a usar cada vez mas patrones de desarrollo para estandarizar sus códigos por lo que conocer nuevos patrones de desarrollo nos facilitara la integración al mundo profesional.
+En negocios internacionales, el aprender sobre el manejo de Java nos va a permitir realizar la creacion de aplicaciones, facilidad en analisis de datos, como tambien automatizar tareas y procesos de empresas. 
+
+Dificultades presentadas durante el desarrollo del proyecto:
+
+Una de las principales dificultades fue entender el manejo de los archivos serializados y cómo cargar correctamente la información desde los archivos para procesarla después. 
+A nivel de grupo también tuvimos dificultades en la comunicación lo cual dificulto llevar a buen fin el proyecto que se venía realizando.
